@@ -1,0 +1,180 @@
+<?php
+  error_reporting(E_ALL ^ E_NOTICE);  //noticeエラーを非表示
+  session_start(); //セッション変数
+  $error =[];
+
+  if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING); //文字列のフィルタリングを行うことが出来る
+  // フォームの送信時にエラーをチェックする
+  if ($_POST['name'] === '') {
+    $error['name'] = 'blank';
+  }
+    if ($_POST['name02'] === '') {
+    $error['name02'] = 'blank';
+  }
+  if ($_POST['email'] === '') {
+    $error['email'] = 'blank';
+  } else if (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
+    //!：否定　→ メールアドレスの書式が間違っている時にfalseをtrue扱いにする
+    $error['email'] = 'email';
+  }
+  if ($_POST['tel'] === '') {
+    $error['tel'] = 'blank';
+  }
+  if ($_POST['address'] === '') {
+    $error['address'] = 'blank';
+  }
+  //エラーが一件もなければ、確認画面に移動
+  if (count($error) === 0) {
+    $_SESSION['form'] = $post;  //セッション変数を次のページでも引き継ぐ
+    header('Location: buy_confirm.php');
+    exit();
+  }
+} else {
+  if(isset($_SESSION['form'])) {  //戻ってきてもセッション変数を渡して、入力を再現
+      $post = $_SESSION['form'];
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <!-- slider(CDN(外部サーバー)から読み込み) -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>注文画面</title>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header" id="section_01">
+    <div class="header_logo">
+      <a href="#section_01"><img src="./img/logo/logo.svg" alt=""></a>
+      <!-- ロゴ作成次第、imgに変更予定 -->
+    </div>
+    <div class="header_menu_sp">
+      <input id="menu_box" type="checkbox">
+      <label for="menu_box" class="menu_btn"><span></span></label>
+      <label for="menu_box" class="menu_back"></label>
+      <nav class="header_menu">
+        <div class="inner">
+          <ul>
+            <li><a href="#section_02" class="header_pc_hover">お知らせ</a></li>
+            <li><a href="#section_03" class="header_pc_hover">こだわり</a></li>
+            <li><a href="#section_04" class="header_pc_hover">栽培過程</a></li>
+            <li class="header_logo_pc"><a href="#section_01"><img src="./img/logo/logo.svg" alt=""></a></li>
+            <li><a href="#section_05" class="header_pc_hover">レシピ</a></li>
+            <li><a href="#section_06" class="header_pc_hover">レビュー</a></li>
+            <li><a href="#section_07" class="contact_btn">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="inner">
+    <div class="contact">
+      <h2 class="sub_title" id="section_07">注文画面</h2>
+      <form action="" method="POST" novalidate>
+        <!--action属性は飛ばす先を指定できる(指定しなければ自らのファイルに)+novalidateは完成後に外す(requiredを無効化している)-->
+        <label class="form_item">
+          <span class="form_title">お名前<span class="required">必須</span></span>
+          <input class="buy_text_area" type="text" name="name" value="<?php echo htmlspecialchars($post['name']); ?>" placeholder="Your name..." required />
+          <!--valueの設定で入力の再現が可能になる-->
+          <!--requiredで入力必須をWeb上へ設定-->
+          <?php if ($error['name'] === 'blank'): ?>
+          <p class="error_msg">※お名前をご記入ください</p>
+          <?php endif ?>
+        </label>
+
+        <!-- PHP未対応　▶︎ 済 -->
+        <label class="form_item">
+          <span class="form_title">ふりがな<span class="required">必須</span></span>
+          <input class="buy_text_area" type="text" name="name02" value="<?php echo htmlspecialchars($post['name02']); ?>" placeholder="Your name..." required />
+          <!--valueの設定で入力の再現が可能になる-->
+          <!--requiredで入力必須をWeb上へ設定-->
+          <?php if ($error['name02'] === 'blank'): ?>
+          <p class="error_msg">※ふりがなをご記入ください</p>
+          <?php endif ?>
+        </label>
+
+        <label class="form_item">
+          <span class="form_title">メールアドレス<span class="required">必須</span></span>
+          <input class="buy_text_area" type="text" name="email" value="<?php echo htmlspecialchars($post['email']); ?>" placeholder="Your mail address..." required />
+          <?php if ($error['email'] === 'blank'): ?>
+          <p class="error_msg">※メールアドレスをご記入ください</p>
+          <?php endif ?>
+          <?php if ($error['email'] === 'email'): ?>
+          <p class="error_msg">※メールアドレス正しくご記入ください</p>
+          <?php endif ?>
+        </label>
+
+        <!-- PHP未対応　▶︎ 済 -->
+        <label class="form_item">
+          <span class="form_title">電話番号<span class="required">必須</span></span>
+          <input class="buy_text_area" type="text" name="tel" value="<?php echo htmlspecialchars($post['tel']); ?>" placeholder="Your telephone..." required />
+          <?php if ($error['tel'] === 'blank'): ?>
+          <p class="error_msg">※電話番号をご記入ください</p>
+          <?php endif ?>
+        </label>
+
+        <label class="form_item">
+          <span class="form_title">住所<span class="required">必須</span></span>
+          <input class="buy_text_area" type="text" name="address" value="<?php echo htmlspecialchars($post['address']); ?>" placeholder="県名からご記入ください" required />
+          <?php if ($error['address'] === 'blank'): ?>
+          <p class="error_msg">※住所をご記入ください</p>
+          <?php endif ?>
+        </label>
+
+        <div class="form_submit_02">
+          <a href="index.php" class="form_back">戻る</a>
+          <input type="submit" class="submit" value="送信する" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="inner">
+      <div class="footer_wrap">
+        <div class="company_info child_01">
+          <a href="#section_01"><img src="./img/logo/logo.svg" alt=""></a>
+          <p><img src="./img/tel.svg" alt="">090-0000-0000</p>
+          <p>〒 000-0000</p>
+          <p>鹿児島県〇〇市〇〇町〇〇番地</p>
+        </div>
+        <div class="site_map child_02">
+          <ul>
+            <div class="site_map_A">
+              <li><a href="#">コンテンツ01</a></li>
+              <li><a href="#">コンテンツ02</a></li>
+              <li><a href="#">コンテンツ03</a></li>
+              <li><a href="#">コンテンツ04</a></li>
+              <li><a href="#">コンテンツ05</a></li>
+            </div>
+            <div class="site_map_B">
+              <li><a href="#">コンテンツ06</a></li>
+              <li><a href="#">コンテンツ07</a></li>
+              <li><a href="#">コンテンツ08</a></li>
+              <li><a href="#">コンテンツ09</a></li>
+              <li><a href="#">コンテンツ10</a></li>
+            </div>
+          </ul>
+          <hr>
+        </div>
+        <p class="author child_03">© COMPANY_NAME</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
