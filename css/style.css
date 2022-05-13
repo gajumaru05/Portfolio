@@ -1082,7 +1082,7 @@ form {
 }
 
 .form_item {
-    width: 95%;
+    width: 88%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -1363,7 +1363,7 @@ hr {
     }
 
     .form_item {
-        width: 80%;
+        width: 75%;
     }
 
 }
@@ -1615,10 +1615,6 @@ hr {
 
     .buy_area_btn {
         margin: 28px auto 32px auto;
-    }
-
-    .form_item {
-        width: 75%;
     }
 
     .form_submit_02 {
