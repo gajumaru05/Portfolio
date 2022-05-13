@@ -3,7 +3,7 @@
 html {
     font-size: 100%;
     /* 1rem = 16px */
-    /* scroll-behavior: smooth; */
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 h1 {
@@ -258,7 +258,8 @@ main {
 .sub_text {
     display: block;
     width: 80%;
-    margin: 0 auto 40px auto;
+    line-height: 1.2;
+    margin: 0 auto 32px auto;
 }
 
 /* サブタイトルの左右のじゃがいも */
@@ -1451,7 +1452,7 @@ hr {
     }
 
     .sub_title {
-        padding: 32px 0;
+        padding: 32px 0 24px 0;
     }
 
     .news .sub_title {
