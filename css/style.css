@@ -210,7 +210,7 @@ main {
 .top img {
     width: 100%;
     margin-top: 16px;
-    border-radius: 24px;
+    /* border-radius: 24px; */
 }
 
 /* ----- サブタイトル ----- */
@@ -258,7 +258,7 @@ main {
 .sub_text {
     display: block;
     width: 80%;
-    line-height: 1.2;
+    line-height: 1.1;
     margin: 0 auto 24px auto;
 }
 
@@ -331,13 +331,12 @@ main {
     background: #946054;
     text-align: center;
     display: inline-block;
-    padding: 5px 20px;
+    padding: 3px 20px;
     line-height: 1;
 }
 
 .news_list .item .title {
     width: 100%;
-    margin-top: 5px;
 }
 
 .news_list .item a:hover {
@@ -1350,6 +1349,10 @@ hr {
 
 @media (min-width: 450px) {
 
+    .top img {
+        border-radius: 24px;
+    }
+
     .feature ul li {
         max-width: 500px;
     }
@@ -1509,8 +1512,8 @@ hr {
         min-width: 140px;
     }
 
-    .news_list .item .title {
-        margin: 0px;
+    .news_list .item .category span {
+        padding: 5px 20px;
     }
 
     .feature ul li {
