@@ -6,6 +6,10 @@ html {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+.wrap {
+    overflow: hidden;
+}
+
 h1 {
     font-size: 1.5rem;
     /* 24px */
@@ -1009,7 +1013,7 @@ main {
     font-size: 1.25rem;
     /* 20px */
     line-height: 1.3;
-    margin: 24px auto 16px auto;
+    margin: 16px auto;
 }
 
 .buy_sp_msg {
