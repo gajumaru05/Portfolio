@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
   error_reporting(E_ALL ^ E_NOTICE);  //noticeエラーを非表示
   session_start(); //セッション変数
   $error =[];
@@ -35,7 +35,7 @@
       $post = $_SESSION['form'];
     }
 }
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -371,9 +371,9 @@
                         <input type="text" name="name" value="<?php echo htmlspecialchars($post['name']); ?>" placeholder="Your name..." required />
                         <!--valueの設定で入力の再現が可能になる-->
                         <!--requiredで入力必須をWeb上へ設定-->
-                        <?php if ($error['name'] === 'blank'): ?>
+                        <!-- <?php if ($error['name'] === 'blank'): ?>
                         <p class="error_msg">※お名前をご記入ください</p>
-                        <?php endif ?>
+                        <?php endif ?> -->
                     </label>
 
                     <!-- PHP未対応　▶︎ 済 -->
@@ -382,37 +382,37 @@
                         <input type="text" name="name02" value="<?php echo htmlspecialchars($post['name02']); ?>" placeholder="Your name..." required />
                         <!--valueの設定で入力の再現が可能になる-->
                         <!--requiredで入力必須をWeb上へ設定-->
-                        <?php if ($error['name02'] === 'blank'): ?>
+                        <!-- <?php if ($error['name02'] === 'blank'): ?>
                         <p class="error_msg">※ふりがなをご記入ください</p>
-                        <?php endif ?>
+                        <?php endif ?> -->
                     </label>
 
                     <label class="form_item">
                         <span class="form_title">メールアドレス<span class="required">必須</span></span>
                         <input type="text" name="email" value="<?php echo htmlspecialchars($post['email']); ?>" placeholder="Your mail address..." required />
-                        <?php if ($error['email'] === 'blank'): ?>
+                        <!-- <?php if ($error['email'] === 'blank'): ?>
                         <p class="error_msg">※メールアドレスをご記入ください</p>
                         <?php endif ?>
                         <?php if ($error['email'] === 'email'): ?>
                         <p class="error_msg">※メールアドレス正しくご記入ください</p>
-                        <?php endif ?>
+                        <?php endif ?> -->
                     </label>
 
                     <!-- PHP未対応　▶︎ 済 -->
                     <label class="form_item">
                         <span class="form_title">電話番号<span class="required">必須</span></span>
                         <input type="text" name="tel" value="<?php echo htmlspecialchars($post['tel']); ?>" placeholder="Your telephone..." required />
-                        <?php if ($error['tel'] === 'blank'): ?>
+                        <!-- <?php if ($error['tel'] === 'blank'): ?>
                         <p class="error_msg">※電話番号をご記入ください</p>
-                        <?php endif ?>
+                        <?php endif ?> -->
                     </label>
 
                     <label class="form_item">
                         <span class="form_title">お問い合わせ内容<span class="required">必須</span></span>
                         <textarea type="textarea" name="contact" placeholder="Your comments..." required><?php echo htmlspecialchars($post['contact']); ?></textarea>
-                        <?php if ($error['contact'] === 'blank'): ?>
+                        <!-- <?php if ($error['contact'] === 'blank'): ?>
                         <p class="error_msg">※お問合せ内容をご記入ください</p>
-                        <?php endif ?>
+                        <?php endif ?> -->
                     </label>
 
                     <label class="form_submit">
