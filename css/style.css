@@ -344,9 +344,7 @@ main {
 }
 
 .news_list .item a:hover {
-    /* background-color: #29433d; */
     background-color: #fff;
-    /* color: #fff; */
 }
 
 /* ニュースページ */
@@ -451,7 +449,7 @@ main {
 
 .buy_btn:hover {
     transform: scale(1.2, 1.2);
-    background-color: #866C53;
+    background-color: #bb7738;
 }
 
 /* ----- こだわり ----- */
@@ -566,7 +564,7 @@ main {
     text-align: center;
     font-size: 1.75rem;
     /* 28px */
-    padding: 16px 12px;
+    padding: 14px 12px;
     margin-left: 5px;
     border-radius: 50%;
     color: #fff;
@@ -614,7 +612,7 @@ main {
     width: 100%;
     padding: 20px 24px;
     position: relative;
-    /* border: 1px solid #333; */
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2);
     border-radius: 24px;
     background-color: #f4edda;
 }
@@ -644,37 +642,38 @@ main {
     margin: 10px auto;
 }
 
-.recipe ul li a {
+.recipe_item_btn {
     display: block;
     color: #999;
+    background-color: #fff;
     width: 200px;
+    border-radius: 8px;
     padding: 5px 0;
     margin: 0 0 0 auto;
     text-align: center;
 }
 
 .recipe_item_btn:hover {
-    background-color: #866C53;
+    background-color: #bb7738;
     color: #fff;
-    border-radius: 8px;
 }
 
 .recipe_btn {
     display: block;
-    width: 188px;
+    width: 190px;
     text-align: center;
-    padding: 5px;
-    border: #866C53 solid 1px;
+    padding: 6px 5px;
     border-radius: 12px;
     margin: 40px auto;
     text-decoration: none;
-    color: #333;
+    color: #fff;
+    background-color: #866C53;
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2);
     transition: .3s;
 }
 
 .recipe_btn:hover {
-    background-color: #866C53;
-    color: #ffffff;
+    background-color: #bb7738;
 }
 
 /* レシピ詳細表示ページ */
@@ -720,7 +719,7 @@ main {
 }
 
 .modal_content a:hover {
-    background-color: #604d3c;
+    background-color: #bb7738;
 }
 
 .recipe_btn_space {
@@ -737,11 +736,17 @@ main {
     padding-bottom: 64px;
 }
 
+
+/* レビューの見える領域 */
+.slick-track {
+    padding: 10px 0;
+}
+
 .slider_item {
-    margin: 0 12px;
+    margin: 0 6px;
     padding: 20px;
     border-radius: 12px;
-    /* border: 1px solid #333; */
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.5);
     background-color: #f4edda;
 }
 
@@ -862,19 +867,6 @@ main {
     color: #ffcc00;
 }
 
-/* レビューの星のホバー時動作 */
-/* .rate-form label:hover {
-    color: #ffcc00;
-}
-
-.rate-form label:hover~label {
-    color: #ffcc00;
-}
-
-.rate-form input[type=radio]:checked~label {
-    color: #ffcc00;
-} */
-
 /* slider */
 .slider {
     width: 80%;
@@ -891,21 +883,28 @@ main {
 /* 矢印の設定 */
 .slick-prev,
 .slick-next {
+    width: 40px;
     height: inherit;
     padding: 0;
 }
 
 .slick-prev {
-    left: -5%;
+    left: -9%;
+    z-index: 5;
 }
 
 .slick-next {
-    right: -5%;
+    right: -9%;
 }
 
 .slick-prev:before,
 .slick-next:before {
-    color: #866C53;
+    display: block;
+    width: inherit;
+    padding: 0 0 10px 0;
+    border-radius: 50%;
+    background-color: #866C53;
+    color: #fff;
     font-weight: bold;
     font-size: 2rem;
     /* 矢印の大きさ 32px */
@@ -947,7 +946,6 @@ main {
     color: #866C53;
 }
 
-
 /* 今後、対応予定 */
 /* .review_btn {
     display: block;
@@ -981,6 +979,7 @@ main {
     background-color: #f4edda;
     display: flex;
     flex-direction: column;
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2);
 }
 
 .buy_wrap img {
@@ -1049,19 +1048,18 @@ main {
     width: 188px;
     text-align: center;
     padding: 8px;
-    border: #866C53 solid 1px;
     background-color: #866C53;
     color: #fff;
-    border-radius: 24px;
+    /* border-radius: 4px; */
     font-weight: bold;
     margin: 16px auto 24px auto;
     text-decoration: none;
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.5);
     transition: .3s;
 }
 
 .buy_area_btn:hover {
-    background-color: #fff;
-    color: #333;
+    background-color: #bb7738;
 }
 
 /* 注文詳細画面 */
@@ -1079,9 +1077,10 @@ main {
 form {
     border-radius: 24px;
     width: 90%;
-    margin: 0 auto;
-    padding: 32px 10px;
+    margin: 24px auto 0 auto;
+    padding: 52px 10px 40px 10px;
     background-color: #f4edda;
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2);
 }
 
 .form_item {
@@ -1089,12 +1088,6 @@ form {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-}
-
-/* 各フォームのタイトル */
-.form_item span {
-    font-size: 0.9375rem;
-    /* 15px */
 }
 
 /* 最後の子要素にはmarginを付けない(エラーメッセージが出ると邪魔になる) */
@@ -1105,16 +1098,20 @@ form {
 /* フォームタイトル */
 .form_title {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     font-weight: bold;
     width: 240px;
+    height: 32px;
+    font-size: 0.9375rem;
+    /* 15px */
 }
 
 /* 必須項目 */
 .required {
-    padding: 3px;
-    margin-left: 24px;
+    padding: 1.75px 3px 2.5px 3px;
+    margin: auto 0 auto 24px;
+    font-size: 0.8125rem;
+    /* 13px */
     color: #fff;
     background-color: #946054;
 }
@@ -1125,8 +1122,8 @@ textarea {
     padding: 10px;
     width: 100%;
     margin: 6px 0 8px 0;
-    border: 1px solid #333;
-    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2);
+    border: none;
+    /* box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2); */
 }
 
 textarea {
@@ -1148,20 +1145,25 @@ textarea {
 .submit {
     padding: 5px;
     border-radius: 12px;
-    background-color: #fff;
-    border: 1px solid #866C53;
-    color: #333;
+    background-color: #866C53;
+    border: none;
+    color: #fff;
     cursor: pointer;
     width: 200px;
-    height: 28px;
-    font-size: 0.875rem;
+    height: 30px;
+    font-size: 0.9rem;
+    /* 約14px 戻るボタンとの見た目が違う為 */
     line-height: 1rem;
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.5);
     transition: .3s;
 }
 
+.submit_space {
+    margin: 56px auto 32px;
+}
+
 .submit:hover {
-    background-color: #866C53;
-    color: #ffffff;
+    background-color: #bb7738;
 }
 
 .top_btn {
@@ -1289,13 +1291,12 @@ hr {
 
 .contact_02 {
     padding: 40px 0 80px 0;
-    /* margin-bottom: 40px; */
 }
 
 .confirm_title {
     font-size: 0.9375rem;
     /* 15px */
-    line-height: 1.5;
+    margin-bottom: 10px;
     font-weight: bold;
     width: 100%;
 }
@@ -1304,14 +1305,16 @@ hr {
     width: 100%;
     font-size: 0.875rem;
     /* 14px */
-    line-height: 50px;
     text-align: center;
-    border: 1px solid #333;
-    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2);
+    padding: 12px;
+    /* box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2); */
+    background-color: #fff;
 }
 
+/* お問い合わせ内容のテキスト内 */
 .confirm_space .confirm_text {
     padding: 16px;
+    line-height: 1.2;
     text-align: left;
 }
 
@@ -1324,7 +1327,7 @@ hr {
 
 .form_submit_02 {
     width: 80%;
-    margin: 40px auto 24px auto;
+    margin: 56px auto 24px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1334,21 +1337,22 @@ hr {
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    width: 188px;
-    height: 16px;
-    line-height: 16px;
+    width: 190px;
+    height: 20px;
+    line-height: 0.9375rem;
     padding: 5px;
+    font-size: 0.9375rem;
+    /* 15px */
     border-radius: 12px;
     margin-bottom: 20px;
-    color: #333;
-    border: 1px solid #866C53;
+    color: #fff;
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.5);
     transition: .3s;
-    background-color: #fff;
+    background-color: #866C53;
 }
 
 .form_back:hover {
-    background-color: #866C53;
-    color: #fff;
+    background-color: #bb7738;
 }
 
 @media (min-width: 450px) {
@@ -1450,8 +1454,7 @@ hr {
     }
 
     .contact_btn:hover {
-        background-color: #fff;
-        color: #333;
+        background-color: #bb7738;
     }
 
     .header_logo_pc {
@@ -1583,6 +1586,19 @@ hr {
         width: 32.5%;
     }
 
+    .slick-prev {
+        left: -6%;
+    }
+
+    .slick-next {
+        right: -6%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        padding: 0 2.5px 10px 2.5px;
+    }
+
     .buy_btn {
         width: 100px;
         height: 100px;
@@ -1626,13 +1642,12 @@ hr {
 
     .form_submit_02 {
         width: 540px;
-        display: flex;
         flex-direction: row;
         justify-content: center;
     }
 
     .form_back {
-        margin: 0 120px 0 0;
+        margin: 0 80px 0 0;
     }
 
     .footer_wrap {
