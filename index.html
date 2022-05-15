@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
   error_reporting(E_ALL ^ E_NOTICE);  //noticeエラーを非表示
   session_start(); //セッション変数
   $error =[];
@@ -35,7 +35,7 @@
       $post = $_SESSION['form'];
     }
 }
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -43,453 +43,455 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://gajumaru05.github.io/Portfolio/css/reset.css" />
-  
+    <link rel="stylesheet" href="./css/reset.css" />
+
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-  
+
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" href="https://gajumaru05.github.io/Portfolio/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>春風 じゃがいも</title>
 </head>
 
 <body>
-    <!-- ヘッダー -->
-    <header class="header" id="section_01">
-        <div class="header_logo">
-            <a href="#section_01"><img src="./img/logo/logo.svg" alt=""></a>
-            <!-- ロゴ作成次第、imgに変更予定 -->
+    <div class="wrap">
+        <!-- ヘッダー -->
+        <header class="header" id="section_01">
+            <div class="header_logo">
+                <a href="#section_01"><img src="./img/logo/logo.svg" alt=""></a>
+                <!-- ロゴ作成次第、imgに変更予定 -->
+            </div>
+            <div class="header_menu_sp">
+                <input id="menu_box" type="checkbox">
+                <label for="menu_box" class="menu_btn"><span></span></label>
+                <label for="menu_box" class="menu_back"></label>
+                <nav class="header_menu">
+                    <div class="inner">
+                        <ul>
+                            <li><a href="#section_02" class="header_pc_hover">お知らせ</a></li>
+                            <li><a href="#section_03" class="header_pc_hover">こだわり</a></li>
+                            <li><a href="#section_04" class="header_pc_hover">栽培過程</a></li>
+                            <li class="header_logo_pc"><a href="#section_01"><img src="./img/logo/logo.svg" alt=""></a></li>
+                            <li><a href="#section_05" class="header_pc_hover">レシピ</a></li>
+                            <li><a href="#section_06" class="header_pc_hover">レビュー</a></li>
+                            <li><a href="#section_07" class="contact_btn">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- トップページ -->
+        <div class="inner">
+            <div class="top">
+                <img src="./img/top.jpg" alt="">
+            </div>
         </div>
-        <div class="header_menu_sp">
-            <input id="menu_box" type="checkbox">
-            <label for="menu_box" class="menu_btn"><span></span></label>
-            <label for="menu_box" class="menu_back"></label>
-            <nav class="header_menu">
+
+        <main>
+            <!-- お知らせ項目 -->
+            <div class="news">
                 <div class="inner">
+                    <h2 class="sub_title" id="section_02">お知らせ</h2>
+                    <ul class="news_list">
+                        <li class="item">
+                            <a href="news.html">
+                                <p class="day">2022/5/3</p>
+                                <p class="category"><span>期間限定</span></p>
+                                <p class="title">今が旬のじゃがいもが数量限定で販売中！</p>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="news02.html">
+                                <p class="day">2022/5/2</p>
+                                <p class="category"><span>クーポン</span></p>
+                                <p class="title">今回だけのお得な価格でお届け情報</p>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="news03.html">
+                                <p class="day">2022/5/1</p>
+                                <p class="category"><span>お知らせ</span></p>
+                                <p class="title">サイトを開設いたしました！</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- 注文ボタン -->
+            <div class="buy_btn">
+                <a href="#section_08"><img src="./img/cart.png" alt="">
+                    <p>注文</p>
+                </a>
+            </div>
+            <!-- 項目1 -->
+            <div class="inner">
+                <div class="feature">
+                    <h2 class="sub_title" id="section_03">こだわり</h2>
+                    <p class="sub_text">ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
                     <ul>
-                        <li><a href="#section_02" class="header_pc_hover">お知らせ</a></li>
-                        <li><a href="#section_03" class="header_pc_hover">こだわり</a></li>
-                        <li><a href="#section_04" class="header_pc_hover">栽培過程</a></li>
-                        <li class="header_logo_pc"><a href="#section_01"><img src="./img/logo/logo.svg" alt=""></a></li>
-                        <li><a href="#section_05" class="header_pc_hover">レシピ</a></li>
-                        <li><a href="#section_06" class="header_pc_hover">レビュー</a></li>
-                        <li><a href="#section_07" class="contact_btn">お問い合わせ</a></li>
+                        <li>
+                            <div class="feature_item">
+                                <img src="./img/feature/feature_01.jpg" alt="">
+                                <h3>きめ細かい色白の肌色</h3>
+                            </div>
+                            <div class="item_text">
+                                <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature_item">
+                                <img src="./img/feature/feature_02.jpg" alt="">
+                                <h3>安心・安全の産地直送</h3>
+                            </div>
+                            <div class="item_text">
+                                <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature_item">
+                                <img src="./img/feature/feature_03.jpg" alt="">
+                                <h3>離島特有の赤土壌</h3>
+                            </div>
+                            <div class="item_text">
+                                <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature_item">
+                                <img src="./img/feature/feature_04.jpg" alt="">
+                                <h3>甘みがあって煮崩れしにくい</h3>
+                            </div>
+                            <div class="item_text">
+                                <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- トップページ -->
-    <div class="inner">
-        <div class="top">
-            <img src="./img/top.jpg" alt="">
-        </div>
-    </div>
-
-    <main>
-        <!-- お知らせ項目 -->
-        <div class="news">
-            <div class="inner">
-                <h2 class="sub_title" id="section_02">お知らせ</h2>
-                <ul class="news_list">
-                    <li class="item">
-                        <a href="news.html">
-                            <p class="day">2022/5/3</p>
-                            <p class="category"><span>期間限定</span></p>
-                            <p class="title">今が旬のじゃがいもが数量限定で販売中です！</p>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="news02.html">
-                            <p class="day">2022/5/2</p>
-                            <p class="category"><span>クーポン</span></p>
-                            <p class="title">今回だけのお得な価格でお届け情報</p>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="news03.html">
-                            <p class="day">2022/5/1</p>
-                            <p class="category"><span>お知らせ</span></p>
-                            <p class="title">サイトを開設いたしました！</p>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-        <!-- 注文ボタン -->
-        <div class="buy_btn">
-            <a href="#section_08"><img src="./img/cart.png" alt="">
-                <p>注文</p>
-            </a>
-        </div>
-        <!-- 項目1 -->
-        <div class="inner">
-            <div class="feature">
-                <h2 class="sub_title" id="section_03">こだわり</h2>
-                <p class="sub_text">ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                <ul>
-                    <li>
-                        <div class="feature_item">
-                            <img src="./img/feature/feature_01.jpg" alt="">
-                            <h3>きめ細かい色白の肌色</h3>
-                        </div>
-                        <div class="item_text">
+                <div class="process">
+                    <h2 class="sub_title" id="section_04">栽培過程</h2>
+                    <p class="sub_text">ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                    <ul>
+                        <li><img src="./img/process/process_01.jpg" alt="">
+                            <h3>種芋の植え付け</h3>
                             <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="feature_item">
-                            <img src="./img/feature/feature_02.jpg" alt="">
-                            <h3>安心・安全の産地直送</h3>
-                        </div>
-                        <div class="item_text">
+                        </li>
+                        <li><img src="./img/process/process_02.jpg" alt="">
+                            <h3>栽培</h3>
                             <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="feature_item">
-                            <img src="./img/feature/feature_03.jpg" alt="">
-                            <h3>離島特有の赤土壌</h3>
-                        </div>
-                        <div class="item_text">
+                        </li>
+                        <li><img src="./img/process/process_03.jpg" alt="">
+                            <h3>収穫</h3>
                             <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="feature_item">
-                            <img src="./img/feature/feature_04.jpg" alt="">
-                            <h3>甘みがあって煮崩れしにくい</h3>
-                        </div>
-                        <div class="item_text">
+                        </li>
+                        <li><img src="./img/process/process_04.jpg" alt="">
+                            <h3>出荷</h3>
                             <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="process">
-                <h2 class="sub_title" id="section_04">栽培過程</h2>
-                <p class="sub_text">ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                <ul>
-                    <li><img src="./img/process/process_01.jpg" alt="">
-                        <h3>種芋の植え付け</h3>
-                        <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                    </li>
-                    <li><img src="./img/process/process_02.jpg" alt="">
-                        <h3>栽培</h3>
-                        <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                    </li>
-                    <li><img src="./img/process/process_03.jpg" alt="">
-                        <h3>収穫</h3>
-                        <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                    </li>
-                    <li><img src="./img/process/process_04.jpg" alt="">
-                        <h3>出荷</h3>
-                        <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="recipe">
-                <h2 class="sub_title" id="section_05">おすすめレシピ</h2>
-                <p class="sub_text">じゃがいもを使った美味しいレシピを紹介致します。</p>
-                <ul>
-                    <li><img src="./img/recipe/cooking_01.jpg" alt="">
-                        <h3>じゃがバター</h3>
-                        <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                        <a href="" class="recipe_item_btn js_modal_open" data-target="modal01">詳しいレシピはこちら ></a>
-                    </li>
-                    <li><img src="./img/recipe/cooking_02.jpg" alt="">
-                        <h3>フライドポテト</h3>
-                        <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                        <a href="" class="recipe_item_btn js_modal_open" data-target="modal02">詳しいレシピはこちら ></a>
-                    </li>
-                    <li><img src="./img/recipe/cooking_03.jpg" alt="">
-                        <h3>肉じゃが</h3>
-                        <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                        <a href="" class="recipe_item_btn js_modal_open" data-target="modal03">詳しいレシピはこちら ></a>
-                    </li>
-                    <li><img src="./img/recipe/cooking_04.jpg" alt="">
-                        <h3>カレー</h3>
-                        <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-                        <a href="" class="recipe_item_btn js_modal_open" data-target="modal04">詳しいレシピはこちら ></a>
-                    </li>
-                </ul>
-                <a class="recipe_btn" href="recipe.html">もっとレシピを見る</a>
-            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recipe">
+                    <h2 class="sub_title" id="section_05">おすすめレシピ</h2>
+                    <p class="sub_text">じゃがいもを使った美味しいレシピを紹介致します。</p>
+                    <ul>
+                        <li><img src="./img/recipe/cooking_01.jpg" alt="">
+                            <h3>じゃがバター</h3>
+                            <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                            <a href="" class="recipe_item_btn js_modal_open" data-target="modal01">詳しいレシピはこちら ></a>
+                        </li>
+                        <li><img src="./img/recipe/cooking_02.jpg" alt="">
+                            <h3>フライドポテト</h3>
+                            <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                            <a href="" class="recipe_item_btn js_modal_open" data-target="modal02">詳しいレシピはこちら ></a>
+                        </li>
+                        <li><img src="./img/recipe/cooking_03.jpg" alt="">
+                            <h3>肉じゃが</h3>
+                            <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                            <a href="" class="recipe_item_btn js_modal_open" data-target="modal03">詳しいレシピはこちら ></a>
+                        </li>
+                        <li><img src="./img/recipe/cooking_04.jpg" alt="">
+                            <h3>カレー</h3>
+                            <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                            <a href="" class="recipe_item_btn js_modal_open" data-target="modal04">詳しいレシピはこちら ></a>
+                        </li>
+                    </ul>
+                    <a class="recipe_btn" href="recipe.html">もっとレシピを見る</a>
+                </div>
 
-            <div class="review">
-                <h2 class="sub_title" id="section_06">お客様の声</h2>
-                <ul class="slider" id="js-slider">
-                    <li class="slider_item">
-                        <div class="review_wrap"><img src="./img/review/icon.png" alt="">
-                            <div class="review_item">
-                                <p>あだん</p>
-                                <p class="review_day">2022.04.05 review</p>
+                <div class="review">
+                    <h2 class="sub_title" id="section_06">お客様の声</h2>
+                    <ul class="slider" id="js-slider">
+                        <li class="slider_item">
+                            <div class="review_wrap"><img src="./img/review/icon.png" alt="">
+                                <div class="review_item">
+                                    <p>あだん</p>
+                                    <p class="review_day">2022.04.05 review</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review_comment review_item01">
-                            <h3>知人への贈り物として</h3>
-                            <div class="rate-form">
-                                <input id="star_05" type="radio" name="rate" value="5">
-                                <label for="star_05">★</label>
-                                <input id="star_04" type="radio" name="rate" value="4">
-                                <label for="star_04">★</label>
-                                <input id="star_03" type="radio" name="rate" value="3">
-                                <label for="star_03">★</label>
-                                <input id="star_02" type="radio" name="rate" value="2">
-                                <label for="star_02">★</label>
-                                <input id="star_01" type="radio" name="rate" value="1">
-                                <label for="star_01">★</label>
+                            <div class="review_comment review_item01">
+                                <h3>知人への贈り物として</h3>
+                                <div class="rate-form">
+                                    <input id="star_05" type="radio" name="rate" value="5">
+                                    <label for="star_05">★</label>
+                                    <input id="star_04" type="radio" name="rate" value="4">
+                                    <label for="star_04">★</label>
+                                    <input id="star_03" type="radio" name="rate" value="3">
+                                    <label for="star_03">★</label>
+                                    <input id="star_02" type="radio" name="rate" value="2">
+                                    <label for="star_02">★</label>
+                                    <input id="star_01" type="radio" name="rate" value="1">
+                                    <label for="star_01">★</label>
+                                </div>
+                                <p>コメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入ります</p>
                             </div>
-                            <p>コメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入ります</p>
-                        </div>
-                    </li>
-                    <li class="slider_item">
-                        <div class="review_wrap"><img src="./img/review/icon.png" alt="">
-                            <div class="review_item">
-                                <p>がじゅまる</p>
-                                <p class="review_day">2022.04.10 review</p>
+                        </li>
+                        <li class="slider_item">
+                            <div class="review_wrap"><img src="./img/review/icon.png" alt="">
+                                <div class="review_item">
+                                    <p>がじゅまる</p>
+                                    <p class="review_day">2022.04.10 review</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review_comment review_item02">
-                            <h3>少し値段は高いが美味い！</h3>
-                            <div class="rate-form">
-                                <input id="star_05" type="radio" name="rate" value="5">
-                                <label for="star_05">★</label>
-                                <input id="star_04" type="radio" name="rate" value="4">
-                                <label for="star_04">★</label>
-                                <input id="star_03" type="radio" name="rate" value="3">
-                                <label for="star_03">★</label>
-                                <input id="star_02" type="radio" name="rate" value="2">
-                                <label for="star_02">★</label>
-                                <input id="star_01" type="radio" name="rate" value="1">
-                                <label for="star_01">★</label>
+                            <div class="review_comment review_item02">
+                                <h3>少し値段は高いが美味い！</h3>
+                                <div class="rate-form">
+                                    <input id="star_05" type="radio" name="rate" value="5">
+                                    <label for="star_05">★</label>
+                                    <input id="star_04" type="radio" name="rate" value="4">
+                                    <label for="star_04">★</label>
+                                    <input id="star_03" type="radio" name="rate" value="3">
+                                    <label for="star_03">★</label>
+                                    <input id="star_02" type="radio" name="rate" value="2">
+                                    <label for="star_02">★</label>
+                                    <input id="star_01" type="radio" name="rate" value="1">
+                                    <label for="star_01">★</label>
+                                </div>
+                                <p>コメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入ります</p>
                             </div>
-                            <p>コメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入ります</p>
-                        </div>
-                    </li>
-                    <li class="slider_item">
-                        <div class="review_wrap"><img src="./img/review/icon.png" alt="">
-                            <div class="review_item">
-                                <p>名無しさん</p>
-                                <p class="review_day">2022.04.13 review</p>
+                        </li>
+                        <li class="slider_item">
+                            <div class="review_wrap"><img src="./img/review/icon.png" alt="">
+                                <div class="review_item">
+                                    <p>名無しさん</p>
+                                    <p class="review_day">2022.04.13 review</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review_comment review_item03">
-                            <h3>安心して食べられる</h3>
-                            <div class="rate-form">
-                                <input id="star_05" type="radio" name="rate" value="5">
-                                <label for="star_05">★</label>
-                                <input id="star_04" type="radio" name="rate" value="4">
-                                <label for="star_04">★</label>
-                                <input id="star_03" type="radio" name="rate" value="3">
-                                <label for="star_03">★</label>
-                                <input id="star_02" type="radio" name="rate" value="2">
-                                <label for="star_02">★</label>
-                                <input id="star_01" type="radio" name="rate" value="1">
-                                <label for="star_01">★</label>
+                            <div class="review_comment review_item03">
+                                <h3>安心して食べられる</h3>
+                                <div class="rate-form">
+                                    <input id="star_05" type="radio" name="rate" value="5">
+                                    <label for="star_05">★</label>
+                                    <input id="star_04" type="radio" name="rate" value="4">
+                                    <label for="star_04">★</label>
+                                    <input id="star_03" type="radio" name="rate" value="3">
+                                    <label for="star_03">★</label>
+                                    <input id="star_02" type="radio" name="rate" value="2">
+                                    <label for="star_02">★</label>
+                                    <input id="star_01" type="radio" name="rate" value="1">
+                                    <label for="star_01">★</label>
+                                </div>
+                                <p>コメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入ります</p>
                             </div>
-                            <p>コメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入ります</p>
-                        </div>
-                    </li>
-                    <li class="slider_item">
-                        <div class="review_wrap"><img src="./img/review/icon.png" alt="">
-                            <div class="review_item">
-                                <p>ところてん</p>
-                                <p class="review_day">2022.04.18 review</p>
+                        </li>
+                        <li class="slider_item">
+                            <div class="review_wrap"><img src="./img/review/icon.png" alt="">
+                                <div class="review_item">
+                                    <p>ところてん</p>
+                                    <p class="review_day">2022.04.18 review</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review_comment review_item04">
-                            <h3>来年もリピートしたい！</h3>
-                            <div class="rate-form">
-                                <input id="star_05" type="radio" name="rate" value="5">
-                                <label for="star_05">★</label>
-                                <input id="star_04" type="radio" name="rate" value="4">
-                                <label for="star_04">★</label>
-                                <input id="star_03" type="radio" name="rate" value="3">
-                                <label for="star_03">★</label>
-                                <input id="star_02" type="radio" name="rate" value="2">
-                                <label for="star_02">★</label>
-                                <input id="star_01" type="radio" name="rate" value="1">
-                                <label for="star_01">★</label>
+                            <div class="review_comment review_item04">
+                                <h3>来年もリピートしたい！</h3>
+                                <div class="rate-form">
+                                    <input id="star_05" type="radio" name="rate" value="5">
+                                    <label for="star_05">★</label>
+                                    <input id="star_04" type="radio" name="rate" value="4">
+                                    <label for="star_04">★</label>
+                                    <input id="star_03" type="radio" name="rate" value="3">
+                                    <label for="star_03">★</label>
+                                    <input id="star_02" type="radio" name="rate" value="2">
+                                    <label for="star_02">★</label>
+                                    <input id="star_01" type="radio" name="rate" value="1">
+                                    <label for="star_01">★</label>
+                                </div>
+                                <p>コメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入ります</p>
                             </div>
-                            <p>コメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入ります</p>
-                        </div>
-                    </li>
-                    <li class="slider_item">
-                        <div class="review_wrap"><img src="./img/review/icon.png" alt="">
-                            <div class="review_item">
-                                <p>たこやき</p>
-                                <p class="review_day">2022.04.25 review</p>
+                        </li>
+                        <li class="slider_item">
+                            <div class="review_wrap"><img src="./img/review/icon.png" alt="">
+                                <div class="review_item">
+                                    <p>たこやき</p>
+                                    <p class="review_day">2022.04.25 review</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review_comment review_item05">
-                            <h3>じゃがバターが美味い</h3>
-                            <div class="rate-form">
-                                <input id="star_05" type="radio" name="rate" value="5">
-                                <label for="star_05">★</label>
-                                <input id="star_04" type="radio" name="rate" value="4">
-                                <label for="star_04">★</label>
-                                <input id="star_03" type="radio" name="rate" value="3">
-                                <label for="star_03">★</label>
-                                <input id="star_02" type="radio" name="rate" value="2">
-                                <label for="star_02">★</label>
-                                <input id="star_01" type="radio" name="rate" value="1">
-                                <label for="star_01">★</label>
+                            <div class="review_comment review_item05">
+                                <h3>じゃがバターが美味い</h3>
+                                <div class="rate-form">
+                                    <input id="star_05" type="radio" name="rate" value="5">
+                                    <label for="star_05">★</label>
+                                    <input id="star_04" type="radio" name="rate" value="4">
+                                    <label for="star_04">★</label>
+                                    <input id="star_03" type="radio" name="rate" value="3">
+                                    <label for="star_03">★</label>
+                                    <input id="star_02" type="radio" name="rate" value="2">
+                                    <label for="star_02">★</label>
+                                    <input id="star_01" type="radio" name="rate" value="1">
+                                    <label for="star_01">★</label>
+                                </div>
+                                <p>コメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入ります</p>
                             </div>
-                            <p>コメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入りますコメントが入ります</p>
+                        </li>
+                    </ul>
+                    <!-- <a class="review_btn" href="#">レビューする</a> -->
+                    <!-- 今後、対応予定 -->
+                </div>
+                <div class="buy">
+                    <h2 class="sub_title" id="section_08">注文</h2>
+                    <div class="buy_wrap">
+                        <img src="./img/buy/poteto.jpg" alt="">
+                        <div class="buy_item">
+                            <p class="buy_sp_msg buy_item_title">数量限定</p>
+                            <h3 class="buy_item_title">〇〇〇県産 〇〇じゃがいも 5kg 1箱</h3>
+                            <p class="buy_postage_msg buy_item_title">送料無料</p>
+                            <h4 class="buy_item_title">¥5000</h4>
+                            <a class="buy_area_btn" href="buy.html">注文画面へ</a>
+                            <p class="buy_note_msg">※数量に制限がある為、お一人様1箱まで<br>※直射日光などに弱い為、日陰の涼しい場所で保管ください。<br>※消費期限は1ヶ月となっております。</p>
                         </div>
-                    </li>
-                </ul>
-                <!-- <a class="review_btn" href="#">レビューする</a> -->
-                <!-- 今後、対応予定 -->
-            </div>
-            <div class="buy">
-                <h2 class="sub_title" id="section_08">注文</h2>
-                <div class="buy_wrap">
-                    <img src="./img/buy/poteto.jpg" alt="">
-                    <div class="buy_item">
-                        <p class="buy_sp_msg buy_item_title">数量限定</p>
-                        <h3 class="buy_item_title">〇〇〇県産 〇〇じゃがいも 5kg 1箱</h3>
-                        <p class="buy_postage_msg buy_item_title">送料無料</p>
-                        <h4 class="buy_item_title">¥5000</h4>
-                        <a class="buy_area_btn" href="buy.html">注文画面へ</a>
-                        <p class="buy_note_msg">※数量に制限がある為、お一人様1箱まで<br>※直射日光などに弱い為、日陰の涼しい場所で保管ください。<br>※消費期限は1ヶ月となっております。</p>
                     </div>
                 </div>
-            </div>
-            <div class="contact">
-                <h2 class="sub_title" id="section_07">お問い合わせ</h2>
-                <form action="" method="POST" novalidate>
-                    <!--action属性は飛ばす先を指定できる(指定しなければ自らのファイルに)+novalidateは完成後に外す(requiredを無効化している)-->
-                    <label class="form_item">
-                        <span class="form_title">お名前<span class="required">必須</span></span>
-                        <input type="text" name="name" value="<?php echo htmlspecialchars($post['name']); ?>" placeholder="Your name..." required />
-                        <!--valueの設定で入力の再現が可能になる-->
-                        <!--requiredで入力必須をWeb上へ設定-->
-                        <!-- <?php if ($error['name'] === 'blank'): ?>
-                        <p class="error_msg">※お名前をご記入ください</p>
-                        <?php endif ?> -->
-                    </label>
+                <div class="contact">
+                    <h2 class="sub_title" id="section_07">お問い合わせ</h2>
+                    <form action="" method="POST" novalidate>
+                        <!--action属性は飛ばす先を指定できる(指定しなければ自らのファイルに)+novalidateは完成後に外す(requiredを無効化している)-->
+                        <label class="form_item">
+                            <span class="form_title">お名前<span class="required">必須</span></span>
+                            <input type="text" name="name" value="<?php echo htmlspecialchars($post['name']); ?>" placeholder="Your name..." required />
+                            <!--valueの設定で入力の再現が可能になる-->
+                            <!--requiredで入力必須をWeb上へ設定-->
+                            <?php if ($error['name'] === 'blank'): ?>
+                            <p class="error_msg">※お名前をご記入ください</p>
+                            <?php endif ?>
+                        </label>
 
-                    <!-- PHP未対応　▶︎ 済 -->
-                    <label class="form_item">
-                        <span class="form_title">ふりがな<span class="required">必須</span></span>
-                        <input type="text" name="name02" value="<?php echo htmlspecialchars($post['name02']); ?>" placeholder="Your name..." required />
-                        <!--valueの設定で入力の再現が可能になる-->
-                        <!--requiredで入力必須をWeb上へ設定-->
-                        <!-- <?php if ($error['name02'] === 'blank'): ?>
-                        <p class="error_msg">※ふりがなをご記入ください</p>
-                        <?php endif ?> -->
-                    </label>
+                        <!-- PHP未対応　▶︎ 済 -->
+                        <label class="form_item">
+                            <span class="form_title">ふりがな<span class="required">必須</span></span>
+                            <input type="text" name="name02" value="<?php echo htmlspecialchars($post['name02']); ?>" placeholder="Your name..." required />
+                            <!--valueの設定で入力の再現が可能になる-->
+                            <!--requiredで入力必須をWeb上へ設定-->
+                            <?php if ($error['name02'] === 'blank'): ?>
+                            <p class="error_msg">※ふりがなをご記入ください</p>
+                            <?php endif ?>
+                        </label>
 
-                    <label class="form_item">
-                        <span class="form_title">メールアドレス<span class="required">必須</span></span>
-                        <input type="text" name="email" value="<?php echo htmlspecialchars($post['email']); ?>" placeholder="Your mail address..." required />
-                        <!-- <?php if ($error['email'] === 'blank'): ?>
-                        <p class="error_msg">※メールアドレスをご記入ください</p>
-                        <?php endif ?>
-                        <?php if ($error['email'] === 'email'): ?>
-                        <p class="error_msg">※メールアドレス正しくご記入ください</p>
-                        <?php endif ?> -->
-                    </label>
+                        <label class="form_item">
+                            <span class="form_title">メールアドレス<span class="required">必須</span></span>
+                            <input type="text" name="email" value="<?php echo htmlspecialchars($post['email']); ?>" placeholder="Your mail address..." required />
+                            <?php if ($error['email'] === 'blank'): ?>
+                            <p class="error_msg">※メールアドレスをご記入ください</p>
+                            <?php endif ?>
+                            <?php if ($error['email'] === 'email'): ?>
+                            <p class="error_msg">※メールアドレス正しくご記入ください</p>
+                            <?php endif ?>
+                        </label>
 
-                    <!-- PHP未対応　▶︎ 済 -->
-                    <label class="form_item">
-                        <span class="form_title">電話番号<span class="required">必須</span></span>
-                        <input type="text" name="tel" value="<?php echo htmlspecialchars($post['tel']); ?>" placeholder="Your telephone..." required />
-                        <!-- <?php if ($error['tel'] === 'blank'): ?>
-                        <p class="error_msg">※電話番号をご記入ください</p>
-                        <?php endif ?> -->
-                    </label>
+                        <!-- PHP未対応　▶︎ 済 -->
+                        <label class="form_item">
+                            <span class="form_title">電話番号<span class="required">必須</span></span>
+                            <input type="text" name="tel" value="<?php echo htmlspecialchars($post['tel']); ?>" placeholder="Your telephone..." required />
+                            <?php if ($error['tel'] === 'blank'): ?>
+                            <p class="error_msg">※電話番号をご記入ください</p>
+                            <?php endif ?>
+                        </label>
 
-                    <label class="form_item">
-                        <span class="form_title">お問い合わせ内容<span class="required">必須</span></span>
-                        <textarea type="textarea" name="contact" placeholder="Your comments..." required><?php echo htmlspecialchars($post['contact']); ?></textarea>
-                        <!-- <?php if ($error['contact'] === 'blank'): ?>
-                        <p class="error_msg">※お問合せ内容をご記入ください</p>
-                        <?php endif ?> -->
-                    </label>
+                        <label class="form_item">
+                            <span class="form_title">お問い合わせ内容<span class="required">必須</span></span>
+                            <textarea type="textarea" name="contact" placeholder="Your comments..." required><?php echo htmlspecialchars($post['contact']); ?></textarea>
+                            <?php if ($error['contact'] === 'blank'): ?>
+                            <p class="error_msg">※お問合せ内容をご記入ください</p>
+                            <?php endif ?>
+                        </label>
 
-                    <label class="form_submit">
-                        <input type="submit" class="submit" value="確認画面へ" />
-                    </label>
-                </form>
-            </div>
-            <div class="top_btn">
-                <a href="#section_01"><img src="./img/top_btn.png" alt=""></a>
-            </div>
-        </div>
-
-        <!-- レシピ詳細記述 -->
-        <!-- inner内で記述すると形式が崩れてしまう為 -->
-        <div id="modal01" class="modal js-modal">
-            <div class="modal_bg js_modal_close"></div>
-            <div class="modal_content">
-                <p>1つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
-                <a class="js_modal_close" href="">閉じる</a>
-            </div>
-        </div>
-        <div id="modal02" class="modal js-modal">
-            <div class="modal_bg js_modal_close"></div>
-            <div class="modal_content">
-                <p>2つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
-                <a class="js_modal_close" href="">閉じる</a>
-            </div>
-        </div>
-        <div id="modal03" class="modal js-modal">
-            <div class="modal_bg js_modal_close"></div>
-            <div class="modal_content">
-                <p>3つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
-                <a class="js_modal_close" href="">閉じる</a>
-            </div>
-        </div>
-        <div id="modal04" class="modal js-modal">
-            <div class="modal_bg js_modal_close"></div>
-            <div class="modal_content">
-                <p>4つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
-                <a class="js_modal_close" href="">閉じる</a>
-            </div>
-        </div>
-
-    </main>
-
-    <footer class="footer">
-        <div class="inner">
-            <div class="footer_wrap">
-                <div class="company_info child_01">
-                    <a href="#section_01"><img src="./img/logo/logo.svg" alt=""></a>
-                    <p><img src="./img/tel.svg" alt="">090-0000-0000</p>
-                    <p>〒 000-0000</p>
-                    <p>〇〇〇県〇〇市〇〇町〇〇番地</p>
+                        <label class="form_submit submit_space">
+                            <input type="submit" class="submit" value="確認画面へ" />
+                        </label>
+                    </form>
                 </div>
-                <div class="site_map child_02">
-                    <ul>
-                        <div class="site_map_A">
-                            <li><a href="#">コンテンツ01</a></li>
-                            <li><a href="#">コンテンツ02</a></li>
-                            <li><a href="#">コンテンツ03</a></li>
-                            <li><a href="#">コンテンツ04</a></li>
-                            <li><a href="#">コンテンツ05</a></li>
-                        </div>
-                        <div class="site_map_B">
-                            <li><a href="#">コンテンツ06</a></li>
-                            <li><a href="#">コンテンツ07</a></li>
-                            <li><a href="#">コンテンツ08</a></li>
-                            <li><a href="#">コンテンツ09</a></li>
-                            <li><a href="#">コンテンツ10</a></li>
-                        </div>
-                    </ul>
-                    <hr>
+                <div class="top_btn">
+                    <a href="#section_01"><img src="./img/top_btn.png" alt=""></a>
                 </div>
-                <p class="author child_03">© COMPANY_NAME</p>
             </div>
-        </div>
-    </footer>
+
+            <!-- レシピ詳細記述 -->
+            <!-- inner内で記述すると形式が崩れてしまう為 -->
+            <div id="modal01" class="modal js-modal">
+                <div class="modal_bg js_modal_close"></div>
+                <div class="modal_content">
+                    <p>1つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+                    <a class="js_modal_close" href="">閉じる</a>
+                </div>
+            </div>
+            <div id="modal02" class="modal js-modal">
+                <div class="modal_bg js_modal_close"></div>
+                <div class="modal_content">
+                    <p>2つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+                    <a class="js_modal_close" href="">閉じる</a>
+                </div>
+            </div>
+            <div id="modal03" class="modal js-modal">
+                <div class="modal_bg js_modal_close"></div>
+                <div class="modal_content">
+                    <p>3つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+                    <a class="js_modal_close" href="">閉じる</a>
+                </div>
+            </div>
+            <div id="modal04" class="modal js-modal">
+                <div class="modal_bg js_modal_close"></div>
+                <div class="modal_content">
+                    <p>4つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+                    <a class="js_modal_close" href="">閉じる</a>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <div class="inner">
+                <div class="footer_wrap">
+                    <div class="company_info child_01">
+                        <a href="#section_01"><img src="./img/logo/logo.svg" alt=""></a>
+                        <p><img src="./img/tel.svg" alt="">090-0000-0000</p>
+                        <p>〒 000-0000</p>
+                        <p>〇〇〇県〇〇市〇〇町〇〇番地</p>
+                    </div>
+                    <div class="site_map child_02">
+                        <ul>
+                            <div class="site_map_A">
+                                <li><a href="#">コンテンツ01</a></li>
+                                <li><a href="#">コンテンツ02</a></li>
+                                <li><a href="#">コンテンツ03</a></li>
+                                <li><a href="#">コンテンツ04</a></li>
+                                <li><a href="#">コンテンツ05</a></li>
+                            </div>
+                            <div class="site_map_B">
+                                <li><a href="#">コンテンツ06</a></li>
+                                <li><a href="#">コンテンツ07</a></li>
+                                <li><a href="#">コンテンツ08</a></li>
+                                <li><a href="#">コンテンツ09</a></li>
+                                <li><a href="#">コンテンツ10</a></li>
+                            </div>
+                        </ul>
+                        <hr>
+                    </div>
+                    <p class="author child_03">© COMPANY_NAME</p>
+                </div>
+            </div>
+        </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/script.js"></script>
