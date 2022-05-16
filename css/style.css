@@ -52,7 +52,7 @@ ul li a {
 
 .header {
     height: 100px;
-    background-color: #3b5d38;
+    background-color: #385D55;
 }
 
 .inner {
@@ -298,7 +298,7 @@ main {
     padding: 0 0 28px 0;
     /* color: #fff; */
     /* background-color: #3F7073; */
-    background-color: #f4edda;
+    background-color: #f4eddab4;
 }
 
 .news_list .item a {
@@ -482,21 +482,20 @@ main {
     display: block;
     position: absolute;
     top: -3%;
-    left: 0;
+    left: -2.5%;
     text-align: center;
     font-size: 1.5rem;
     /* 24px */
     padding: 12px 16px;
-    margin-left: 5px;
     border-radius: 24px 0 24px 0;
-    transform: rotate(-8deg);
+    transform: rotate(-6deg);
     color: #fff;
-    background-color: #638880;
+    background-color: #83A672;
 }
 
 .feature ul li img {
     display: block;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     border-radius: 12px;
 }
@@ -509,7 +508,6 @@ main {
     bottom: 0;
     width: 100%;
     padding: 6px 0;
-    border-radius: 12px 12px 0 0;
     text-align: center;
 }
 
@@ -522,7 +520,7 @@ main {
     display: block;
     width: 90%;
     margin: 0 auto;
-    padding: 12px 0 14px 0;
+    padding: 10px 0 16px 0;
 }
 
 /* ----- 栽培過程 ----- */
@@ -549,10 +547,6 @@ main {
     /* number2の値を+1ずつ */
 }
 
-.process ul li:not(:first-child) {
-    margin-top: 16px;
-}
-
 /* 写真の左上の数字 */
 .process ul li::before {
     content: counter(number2, decimal-leading-zero);
@@ -568,34 +562,39 @@ main {
     margin-left: 5px;
     border-radius: 24px 0 20px 0;
     color: #fff;
-    background-color: #638880;
+    background-color: #83A672;
 }
 
 .process ul li img {
     display: block;
-    width: 90%;
-    margin: 0 auto 8px auto;
+    width: 100%;
+    margin-bottom: 8px;
     border-radius: 12px;
 }
 
 .process ul li h3 {
     display: block;
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    padding: 8px 14px;
+    padding: 8px 0;
     border-radius: 12px 12px 0 0;
     background-color: #866C53;
     color: #fff;
 }
 
+.process .item_text {
+    background-color: #f4edda;
+}
+
 .process ul li p {
     display: block;
+    box-sizing: content-box;
     width: 90%;
     margin: 0 auto;
-    padding: 10px 14px 14px 14px;
+    padding: 10px 0 16px 0;
     border-radius: 0 0 12px 12px;
-    background-color: #f4edda;
+
 }
 
 /* ----- レシピ ----- */
